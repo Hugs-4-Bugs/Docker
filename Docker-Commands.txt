@@ -1,0 +1,58 @@
+=============================Docker Commands=====================
+docker -v : To check docker version
+
+docker info : To get info about docker
+
+docker login : To login into docker hub account
+
+docker images : To check all docker images
+
+docker pull <image-id> : To pull docker image from docker hub
+
+docker run <image-id> : To run docker image
+
+Note: When we use docker run <image-id>, if image not available locally it downloads from docker hub and it runs that
+
+----------------------Run hello-world image------------------
+
+---------Running Spring Boot Application Using Docker----------
+
+docker build -t <image-name> . : To build docker image using Dockerfile
+
+Ex : docker build -t spring-boot-rest-api .
+
+Note : After building check all images using docker images command
+
+docker run -p OS-HOST-PORT:APP-SERVER-PORT <image-name> : To run docker image
+
+Ex : docker run -p 5000:5555 spring-boot-rest-api
+
+docker run -d -p OS-HOST-PORT:APP-SERVER-PORT <image-name> : To run docker image in background (detached mode)
+
+Ex : docker run -d -p 5000:5555 spring-boot-rest-api
+
+docker tag image-name username/repository:tag : To tag an image
+
+Ex : docker tag spring-boot-rest-api user-id/spring-boot-rest-api:latest
+
+docker push username/image : To push docker image to docker hub
+
+docker rmi <image-id> : To remove docker image
+
+docker run <image-name> : To run docker image
+--------------------------------------------------------------------
+
+Dockerizing SpringBoot Application
+----------------------------------
+1) Create SpringBoot Application
+
+2) Create Dockerfile in Project 
+
+3) Configure components required
+
+4) Build Docker image using Dockerfile
+
+5) Check Docker image created or not
+
+6) Run Docker image which is created above
+
